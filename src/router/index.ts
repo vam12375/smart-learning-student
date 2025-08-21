@@ -31,6 +31,30 @@ const router = createRouter({
       meta: {
         title: '注册'
       }
+    },
+    {
+      path: '/courses',
+      name: 'Courses',
+      component: () => import('@/views/courses/index.vue'),
+      meta: {
+        title: '我的课程'
+      }
+    },
+    {
+      path: '/courses/:id',
+      name: 'CourseDetail',
+      component: () => import('@/views/courses/detail.vue'),
+      meta: {
+        title: '课程详情'
+      }
+    },
+    {
+      path: '/courses/:id/learn',
+      name: 'CourseLearn',
+      component: () => import('@/views/courses/learn.vue'),
+      meta: {
+        title: '课程学习'
+      }
     }
   ],
 })
